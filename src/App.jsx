@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addNumber, minusNumber } from "./redux/modules/counter";
+import { __addNumber, __minusNumber } from "./redux/modules/counterSlice";
 
 const App = () => {
   // 여기에서 store에 접근하여 counter의 값을 가져오려면,
@@ -31,14 +31,14 @@ const App = () => {
       </div>
       <button
         onClick={() => {
-          dispatch(addNumber(number));
+          dispatch(__addNumber(number));
         }}
       >
         +
       </button>
       <button
         onClick={() => {
-          dispatch(minusNumber(number));
+          dispatch(__minusNumber(number));
         }}
       >
         -
